@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulb ON OFF</title>
+</head>
+<style>
+    h1{
+        color: white;
+    }
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 90vh;
+        flex-direction: column;
+        background-color: #222222;
+    }
+    img{
+        height: 50vh;
+        padding: 8px;
+    }
+    button{
+        background-color: aqua;
+        height: 30px;
+        width: 40px;
+        padding: 5px 5px;
+        margin: 8px;
+        border: none;
+        border-radius: 6px;
+    }
+button:hover{
+    background-color:white;
+    transform: scale(1.1);
+    transition: 1s;
+}
+</style>
+<body>
+    <h1 style="font-family: 'Times New Roman', Times, serif; color: chartreuse;">CLICK THE BUTTONS</h1>
+    <img id="bulb" src="./assets/bulb1.jpg.jpeg" alt="bulb">
+    <button onclick="bulb(0)">ON</button>
+    <button onclick="bulb(1)" >OFF</button>
+    <script>
+        function bulb(value){
+            let picture;
+            if(value == 1){
+                picture = "./assets/bulb1.jpg.jpeg"
+            }
+            else{
+                picture = "./assets/bulb2.jpg.jpeg"
+            }
+            document.getElementById('bulb').src=picture;
+        }
+    </script>
+</body>
+</html>
